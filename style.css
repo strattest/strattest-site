@@ -330,7 +330,23 @@ footer {
   }
 }
 @media (max-width: 639px) {
-  .hero p {
+  .hero {
     text-align: left;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    max-width: none;
+    margin: 16px 0 0;
+    font-size: 16px;
+    line-height: 1.7;
+    text-wrap: wrap;
+  }
+
+  .hero .lead {
+    font-size: 16px;
   }
 }
