@@ -329,3 +329,8 @@ footer {
     font-size: 19px;
   }
 }
+@media (max-width: 639px) {
+  .hero p {
+    text-align: left;
+  }
+}
