@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>strattest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <meta name="description" content="Helping traders develop and test their trading ideas. Every rule written down, every test published.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="strattest">
+  <meta property="og:description" content="Helping traders develop and test their trading ideas.">
+  <meta property="og:url" content="https://strattest.app">
+  <meta property="og:image" content="https://strattest.app/images/share/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+
+</head>
+<body>
+
+  <header>
+    <a href="/" class="wordmark">strat-test</a>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>Helping traders develop and test their trading ideas.</h1>
+      <p class="lead">Trading ideas are everywhere. They're in books and journals, on YouTube and all over social media. Scroll through a few charts and you can see some of them working, but that doesn't tell you how an idea really behaves over time.</p>
+      <p>strattest takes an idea back to its starting point, the thinking behind it, and works through it until every rule and every interpretation is written down and nothing is left to chance. Then the idea is tested under different market conditions, and the results are presented as they are.</p>
+    </section>
+
+    <section class="chart">
+      <img class="chart-img" src="images/home/equity-curves.gif" alt="Animated equity curves for EURUSD, gold and Bitcoin, plotted side by side from the same start date">
+    </section>
+
+    <section class="process">
+      <h2>How it works</h2>
+      <ol>
+        <li>
+          <span class="step-num">01</span>
+          <h3>Your strategy</h3>
+          <p>However you trade it today.</p>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <h3>Exact rules</h3>
+          <p>Settled with you, every choice written down.</p>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <h3>The test</h3>
+          <p>Years of data, no hindsight.</p>
+        </li>
+        <li>
+          <span class="step-num">04</span>
+          <h3>The results</h3>
+          <p>As they are, good or bad.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="tests">
+      <h2>Tested strategies</h2>
+      <p>Every test has its own repository with the notebook, the data and the results, so anyone can rerun it.</p>
+
+      <article class="test">
+        <img src="images/tests/first-4h-candle-reentry/trade3.png" alt="Equity curves for the first 4H candle re-entry test across EURUSD, gold and Bitcoin">
+        <div class="test-body">
+          <h3>first-4h-candle-reentry</h3>
+          <p class="test-desc">A YouTube scalping strategy, written as exact rules and tested across three markets.</p>
+          <dl class="test-stats">
+            <div><dt>markets</dt><dd>EURUSD, gold, Bitcoin</dd></div>
+            <div><dt>data</dt><dd>5+ years, 5-minute</dd></div>
+            <div><dt>trades</dt><dd>about 3,100 per market</dd></div>
+            <div><dt>per trade</dt><dd>-0.025R to +0.010R</dd></div>
+            <div><dt>drawdown</dt><dd>80R to 118R</dd></div>
+            <div><dt>costs</dt><dd>not included</dd></div>
+          </dl>
+          <p class="test-result">Not tradeable as it is, but worth a closer look.</p>
+          <a class="test-button" href="https://github.com/strattest/first-4h-candle-reentry">View the repo</a>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-contact">
+      <p class="footer-heading">Want your own strategy tested?</p>
+      <p>Send an email to: <a href="mailto:hello@strattest.app">hello@strattest.app</a></p>
+    </div>
+
+    <nav class="footer-links">
+      <a href="https://github.com/strattest" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+      <a href="https://x.com/strattestapp" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.instagram.com/strattestapp" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.reddit.com/user/strattestapp" aria-label="Reddit" target="_blank" rel="noopener noreferrer"><i class="bi bi-reddit"></i></a>
+    </nav>
+    <p class="disclaimer">Results describe the past. Nothing here promises a strategy will work.</p>
+  </footer>
+
+</body>
+</html>
