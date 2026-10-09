@@ -291,6 +291,65 @@ footer {
   color: var(--text-faint);
 }
 
+
+/* Strategy box */
+
+.strategy-box {
+  position: relative;
+  max-width: 700px;
+  margin: 32px auto;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-deep);
+  cursor: pointer;
+}
+
+.strategy-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.strategy-tag,
+.strategy-hint,
+.strategy-name {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.strategy-tag {
+  top: 10px;
+  left: 12px;
+}
+
+.strategy-hint {
+  bottom: 10px;
+  right: 12px;
+}
+
+.strategy-name {
+  display: none;
+  bottom: 10px;
+  left: 12px;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.strategy-box.paused .strategy-name {
+  display: block;
+}
+
+.strategy-box:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+
 /* Wider screens. These must stay at the bottom of the file. */
 
 @media (min-width: 640px) {
