@@ -76,3 +76,66 @@ if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 } else {
   start();
 }
+
+// The charts shown in the test card, in the order they rotate
+const testCharts = [
+  "trade3.png",
+  "trade40.png",
+  "trade120.png",
+  "trade156.png",
+  "trade1500.png"
+];
+
+const testFolder = "images/tests/first-4h-candle-reentry/";
+const testIntervalMs = 5000;
+
+const testImg = document.getElementById("test-img");
+const testCard = testImg ? testImg.closest(".test") : null;
+
+let testIndex = 0;
+let testTimer = null;
+
+// Load every chart once up front so swapping never flickers
+testCharts.forEach(function (file) {
+  const preload = new Image();
+  preload.src = testFolder + file;
+});
+
+// Show the chart at position i
+function showTestChart(i) {
+  testIndex = i;
+  testImg.src = testFolder + testCharts[i];
+}
+
+// Start moving to the next chart every testIntervalMs
+function startTestRotation() {
+  if (testTimer) return;
+  testTimer = setInterval(function () {
+    showTestChart((testIndex + 1) % testCharts.length);
+  }, testIntervalMs);
+}
+
+// Stop on the current chart
+function stopTestRotation() {
+  clearInterval(testTimer);
+  testTimer = null;
+}
+
+// Only run if the card exists, there is more than one chart,
+// and the visitor hasn't asked their device to reduce motion
+if (
+  testImg &&
+  testCharts.length > 1 &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  startTestRotation();
+
+  // Pause while a mouse is over the card so people can study a chart.
+  // Touch screens are left out so a tap doesn't freeze it.
+  testCard.addEventListener("pointerenter", function (e) {
+    if (e.pointerType === "mouse") stopTestRotation();
+  });
+  testCard.addEventListener("pointerleave", function (e) {
+    if (e.pointerType === "mouse") startTestRotation();
+  });
+}
